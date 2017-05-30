@@ -1,9 +1,10 @@
 # Project Title
 
-Create random person data.
+This project generates random person data.
+Beyond the generate of basic person details, for which it primarily relies on [faker.js](https://github.com/marak/Faker.js/), it adds the ability to produce semi-realistic geo-coordinate data.
+
 
 ## Getting Started
-
 
 ### Prerequisites
 
@@ -18,14 +19,32 @@ After getting the source code:
 npm install
 ```
 
+### Generating Random Person Data
+
+Examples of generating random person data:
+```
+cd util
+node create-people.js
+node create-people.js --generator ./sample-generator-2.js --pretty
+```
+
+The main options are:
+
+--count *count*             Specify the number of people
+--pretty                    Produce pretty json
+--generator *generator*     Specify the person generator, in a form that can be required. This should be a parameterless, infinite, generator function.
+
 ## Running the tests
 
-
-
+To run the tests:
 ```
-Give an example
+npm test
 ```
 
+To continuously run the tests, running when files change:
+```
+npm run watch
+```
 
 ## Author
 
