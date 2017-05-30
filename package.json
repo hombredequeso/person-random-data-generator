@@ -1,0 +1,20 @@
+{
+  "name": "person-random-data-generator",
+  "version": "1.0.0",
+  "description": "Generate random person data.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mark Cheeseman",
+  "license": "MIT",
+  "dependencies": {
+    "faker": "^4.1.0",
+    "geo-utils": "github:hombredequeso/geo-utils",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "chai": "^4.0.0",
+    "mocha": "^3.4.2"
+  }
+}
