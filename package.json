@@ -2,9 +2,10 @@
   "name": "person-random-data-generator",
   "version": "1.0.0",
   "description": "Generate random person data.",
-  "main": "index.js",
+  "main": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha",
+    "watch": "mocha --watch"
   },
   "author": "Mark Cheeseman",
   "license": "MIT",
@@ -15,6 +16,7 @@
   },
   "devDependencies": {
     "chai": "^4.0.0",
+    "jsverify": "^0.8.2",
     "mocha": "^3.4.2"
   }
 }
