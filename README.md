@@ -1,4 +1,4 @@
-# Project Title
+# Random Person Data Generator
 
 This project generates random person data.
 Beyond the generate of basic person details, for which it primarily relies on [faker.js](https://github.com/marak/Faker.js/), it adds the ability to produce semi-realistic geo-coordinate data.
