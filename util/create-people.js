@@ -28,4 +28,3 @@ let serialize = (x, pretty) => pretty? JSON.stringify(x, null, 2): JSON.stringif
 let writer = x => process.stdout.write(x);
 
 produceEntityArray(option.count, generatorX(), serialize, writer, option.pretty);
-
