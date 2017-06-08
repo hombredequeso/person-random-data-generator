@@ -111,20 +111,24 @@ function* personGenerator() {
                 firstName: firstName,
                 lastName: lastName
             },
-            "email": email,
             "tags": randomSubset.getNDistinctFrom(
                                     faker.random.arrayElement, 
                                     tagList,
                                     faker.random.number({min:2, max:5})),
             "poolStatuses": [],
-            "phone": [
-                {"label": "home", "number": phoneNumber}
-            ],
-            "geo": {
-                "coord": geoCoord
+            "contact": {
+                "phone": [
+                    {"label": "home", "number": phoneNumber}
+                ],
+                "email": [
+                    {"label": "work", "address": email}
+                ]
             },
             "address": {
-                "region": randomLocation.city
+                "region": randomLocation.city,
+                "geo": {
+                    "coord": geoCoord
+                }
             }
         };
     }
