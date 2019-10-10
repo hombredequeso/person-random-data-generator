@@ -37,9 +37,24 @@ let produceNdJson = function(totalCount, generator, serialize, writer, pretty) {
 let serialize = (x, pretty) => pretty? JSON.stringify(x, null, 2): JSON.stringify(x);
 let writer = x => process.stdout.write(x);
 
-if (option.format == 'json') {
-    produceEntityArray(option.count, generatorX(), serialize, writer, option.pretty);
+let entityWriters = {
+    json: produceEntityArray,
+    ndjson: produceNdJson
+};
+
+let entityWriter = entityWriters[option.format]
+if (entityWriter === undefined) {
+    let validFormats = Object.keys(entityWriters).reduce((acc, curr) => acc + curr + ", ", '');
+    console.error("Invalid format. Valid formats are: " + validFormats);
+} else {
+    entityWriter(option.count, generatorX(), serialize, writer, option.pretty);
 }
-if (option.format == 'ndjson') {
-    produceNdJson(option.count, generatorX(), serialize, writer, option.pretty);
-}
+
+
+
+// if (option.format == 'json') {
+//     produceEntityArray(option.count, generatorX(), serialize, writer, option.pretty);
+// }
+// if (option.format == 'ndjson') {
+//     produceNdJson(option.count, generatorX(), serialize, writer, option.pretty);
+// }
