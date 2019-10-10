@@ -26,6 +26,7 @@ Examples of generating random person data:
 cd util
 node create-people.js
 node create-people.js --generator ./sample-generator-2.js --pretty
+node create-people.js --generator ./sample-name-generator.js --format ndjson
 ```
 
 The main options are:
@@ -33,6 +34,7 @@ The main options are:
 --count *count*             Specify the number of people
 --pretty                    Produce pretty json
 --generator *generator*     Specify the person generator, in a form that can be required. This should be a parameterless, infinite, generator function.
+--format *output-format*    Specify the output format. Either: json/ndjson. Default is json, which will be a json array of objects.
 
 ## Running the tests
 
