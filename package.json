@@ -12,7 +12,7 @@
   "dependencies": {
     "faker": "^4.1.0",
     "geo-utils": "github:hombredequeso/geo-utils",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.21",
     "uuid": "^3.0.1"
   },
   "devDependencies": {
